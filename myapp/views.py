@@ -16,3 +16,19 @@ def topic(request):
 def records(request):
     d={'objects':Access_Records.objects.order_by('date')}
     return render(request,'page4.html',context=d)
+
+def page5(request):
+    return render(request,'page5.html')
+
+def display(request):
+    data=request.POST.get('first_name',"Key not found")
+    return HttpResponse("<h1>{}</h1>".format(data))
+
+
+
+
+
+
+
+
+
